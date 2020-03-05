@@ -452,7 +452,7 @@ namespace RemoteController.Desktop
             {
                 await Dispatcher.BeginInvoke((Action)(async () =>
                 {
-                    if (Progress != null)
+                    if (Progress != null && Progress.IsOpen)
                     {
                         await Progress.CloseAsync();
                         Progress = null;
